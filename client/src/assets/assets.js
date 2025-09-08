@@ -1,6 +1,6 @@
 import logo from './logo.svg'
 import sample_cover from './sample_cover.jpg'
-import sample_profile from './sample_profile.jpg'
+import profile from './profile.png'
 import bgImage from './bgImage.png'
 import group_users from './group_users.png'
 import { Home, MessageCircle, Search, UserIcon, Users } from 'lucide-react'
@@ -9,7 +9,7 @@ import sponsored_img from './sponsored_img.png'
 export const assets = {
     logo,
     sample_cover,
-    sample_profile,
+    profile,
     bgImage,
     group_users,
     sponsored_img
@@ -29,7 +29,7 @@ export const dummyUserData = {
     "full_name": "Huy Vu",
     "username": "luna_moon",
     "bio": "🌍 Dreamer | 📚 Learner | 🚀 Doer\r\nExploring life one step at a time.\r\n✨ Staying curious. Creating with purpose.",
-    "profile_picture": sample_profile,
+    "profile_picture": profile,
     "cover_photo": sample_cover,
     "location": "New York, NY",
     "followers": ["user_2", "user_3"],
