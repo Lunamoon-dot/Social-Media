@@ -20,9 +20,9 @@ const Feed = () => {
 
 
   return !IsLoading ?(
-    <div className='h-full overflow-y-scroll no-scrollbar flex py-10 xl:pr-5 xl:gap-8'>
+    <div className='h-full overflow-y-scroll no-scrollbar flex py-10  xl:pr-5 xl:gap-8'>
       {/* Post and Story */}
-      <div className='h-full flex flex-2 flex-col justify-center items-center space-y-2 mr-[7%] ml-[10%]'>
+      <div className='h-full flex flex-2 flex-col justify-center items-center space-y-2 xl:mr-[7%] ml-[10%]'>
          <Post Feeds ={Feeds} />
       </div>
       {/* Right Sidebar */}

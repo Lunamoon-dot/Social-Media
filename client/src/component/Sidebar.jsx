@@ -11,7 +11,7 @@ const Sidebar = ({setSidebarOpen}) => {
   const navigate = useNavigate();
   const user = dummyUserData;
   return (
-    <div className='w-75 h-screen translate-x-0 max-lg:w-65 max-sm:-translate-x-full transition-all duration-300 ease-in-out border-r border-gray-300 flex flex-col items-center justify-between'>  
+    <div className='w-75 h-screen translate-x-0 max-lg:w-65 max-sm:absolute max-sm:-translate-x-full transition-all duration-300 ease-in-out border-r border-gray-300 flex flex-col items-center justify-between'>  
       <div className='w-full flex flex-col items-center'>
         <div className='w-full flex py-3 pl-4'>
           <img src={assets.logo} alt="logo-brand" className='w-30' onClick={()=>navigate("/")}/>

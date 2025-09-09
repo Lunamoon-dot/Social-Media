@@ -2,7 +2,8 @@ import React from 'react'
 
 function Post({ Feeds }) {
   return (
-    <div className='w-full h-full flex flex-col items-center space-y-2'>
+    // lam sao cho no transition tot
+    <div className='w-full h-full flex flex-col items-center space-y-2 transition-all duration-300 ease-in-out'>
       {Feeds.map((Feed) => (
         <div key={Feed._id} className='w-full flex flex-col p-4 rounded-lg shadow shadow-gray-400 space-y-1'>
           {/* upper part */}
