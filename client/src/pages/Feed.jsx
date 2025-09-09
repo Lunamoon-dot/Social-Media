@@ -3,6 +3,7 @@ import { dummyPostsData } from '../assets/assets'
 import Loading from '../component/Loading'
 import Post from '../component/Post' 
 import Rightbar from '../component/Rightbar'
+import Story from '../component/Story'
 
 const Feed = () => {
   const [Feeds, setFeeds] = useState([])
@@ -22,7 +23,10 @@ const Feed = () => {
   return !IsLoading ?(
     <div className='h-full overflow-y-scroll no-scrollbar flex py-10  xl:pr-5 xl:gap-8'>
       {/* Post and Story */}
-      <div className='h-full flex flex-2 flex-col justify-center items-center space-y-2 xl:mr-[7%] ml-[10%]'>
+      <div className='w-full flex flex-2 flex-col items-center space-y-4 xl:mr-[7%] ml-[10%]'>
+        <div className='flex'>
+          <Story/>
+        </div>
          <Post Feeds ={Feeds} />
       </div>
       {/* Right Sidebar */}

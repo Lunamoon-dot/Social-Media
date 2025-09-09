@@ -10,26 +10,33 @@ import Profile from './pages/Profile'
 import CreatePost from './pages/CreatePost'
 import {useUser} from '@clerk/clerk-react'
 import Loading from './component/Loading'
+import Notfound from './component/Notfound'
 
 function App() {
   const {isSignedIn, isLoaded} = useUser();
   if(!isLoaded){
     return <Loading/>
   }
-  return (
+  return !isSignedIn ? (
     <Routes>
-      <Route path='/' element={!isSignedIn ?<Loggin /> : <Layout/>}>
+      <Route path='/' element={<Loggin />} />
+      <Route path='*' element={<Notfound/>}/>
+    </Routes>
+  ) : (
+    <Routes>
+      <Route path='/' element={<Layout />}>
         <Route index element={<Feed />} />
-        <Route path='/layout' element={<Layout/>} />
-        <Route path ='/messages' element={ <Messages />} />
-        <Route path ='/messages/:userId' element={ <Chatbox />} />
-        <Route path ='/connections' element={ <Connections />} />
-        <Route path ='/discover' element={ <Discover />} />
-        <Route path ='/profile' element={ <Profile />} />
-        <Route path ='/profile/:userId' element={ <Profile />} />
-        <Route path ='/create-post' element={ <CreatePost />} />
+        <Route path='messages' element={<Messages />} />
+        <Route path='messages/:userId' element={<Chatbox />} />
+        <Route path='connections' element={<Connections />} />
+        <Route path='discover' element={<Discover />} />
+        <Route path='profile' element={<Profile />} />
+        <Route path='profile/:userId' element={<Profile />} />
+        <Route path='create-post' element={<CreatePost />} />
       </Route>
+      <Route path='*' element={<Notfound/>}/>
     </Routes>
   )
 }
 export default App
+ 
