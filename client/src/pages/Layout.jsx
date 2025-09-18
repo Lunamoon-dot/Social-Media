@@ -16,9 +16,9 @@ const Layout = () => {
         <Outlet/>
       </div>
       {SidebarOpen ? (
-        <X className='w-8 h-8 rounded-md mt-2 mr-2 bg-gray-500 text-white flex items-center justify-center sm:hidden' onClick={()=>setSidebarOpen(false)}/>
+        <X className='absolute right-2  size-9 z-110 rounded-md mt-2 mr-2 bg-gray-500 text-white flex items-center justify-center sm:hidden' onClick={()=>setSidebarOpen(false)}/>
       ) : (
-        <Menu className='w-8 h-8 p-0.5 mt-2 mr-2 rounded-md bg-gray-500 text-white flex items-center justify-center sm:hidden' onClick={()=>setSidebarOpen(true)}/>
+        <Menu className=' absolute right-2 size-9 z-110 p-0.5 mt-2 mr-2 rounded-md bg-gray-500 text-white flex items-center justify-center sm:hidden' onClick={()=>setSidebarOpen(true)}/>
       )}
     </div>
   ) : (

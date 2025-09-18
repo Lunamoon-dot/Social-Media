@@ -12,7 +12,7 @@ const Sidebar = ({setSidebarOpen}) => {
   const user = dummyUserData;
   return (
     //kho ma transition ma khong loi
-    <div className='w-75 h-screen translate-x-0 max-lg:w-65 max-sm:fixed max-sm:-translate-x-full duration-300 ease-in-out border-r border-gray-300 flex flex-col items-center justify-between'>  
+    <div className='w-75 h-screen translate-x-0 max-sm:fixed max-lg:w-65 max-sm:-translate-x-full transition-all duration-300 ease-in-out border-r border-gray-300 flex flex-col items-center justify-between'> 
       <div className='w-full flex flex-col items-center'>
         <div className='w-full flex py-3 pl-4'>
           <img src={assets.logo} alt="logo-brand" className='w-10' onClick={()=>navigate("/")}/>
@@ -21,9 +21,9 @@ const Sidebar = ({setSidebarOpen}) => {
         <hr className='w-full text-gray-300 pb-5'/>
         
         <MenuItems setSidebarOpen={setSidebarOpen}/>
-        <Link to="/create-post" className={`w-[90%] mt-[8%] py-3 flex items-center px-[20%] gap-2 rounded-lg bg-gradient-to-r from-blue-400 to-purple-500 cursor-pointer hover:from-blue-500 hover:to-purple-800 active:scale-95 transition-all duration-300 ease-in-out `} onClick={() => setSidebarOpen(false)} >
+        <Link to="/create-post" className={`w-[90%] mt-[8%] py-3 flex items-center justify-center pr-3 gap-2 rounded-lg bg-gradient-to-r from-blue-400 to-purple-500 cursor-pointer hover:from-blue-500 hover:to-purple-800 active:scale-95 transition-all duration-300 ease-in-out `} onClick={() => setSidebarOpen(false)} >
           <CirclePlus className='text-white'/>
-          <h1 className='text-white text-lg'>Create Post</h1>
+          <h1 className='text-white max-md:text-[1rem] text-lg'>Create Post</h1>
         </Link>
       </div>
       
